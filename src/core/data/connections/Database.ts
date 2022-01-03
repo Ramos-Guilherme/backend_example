@@ -16,6 +16,7 @@ export default class Database{
                 Database.connection = await createConnection();
             } catch (error) {
                 console.error('ERRO AO CONECTAR AO BANCO ->', error);
+                throw new Error(`ERRO AO CONECTAR AO BANCO -> ${error}`)
             }
         }
     }
